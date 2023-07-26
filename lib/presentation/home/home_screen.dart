@@ -45,12 +45,24 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
             const SizedBox(height: 16.0),
             FilledButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => twitter()));
+              },
               child: const Text('Twitter'),
             ),
           ],
         ),
       ),
+    );
+  }
+}
+
+class twitter extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.blue,
     );
   }
 }
